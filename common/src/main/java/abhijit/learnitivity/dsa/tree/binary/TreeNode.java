@@ -1,4 +1,4 @@
-package tree.binary;
+package abhijit.learnitivity.dsa.tree.binary;
 
 public class TreeNode {
     public int val;

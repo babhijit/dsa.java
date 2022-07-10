@@ -16,7 +16,7 @@ allprojects {
 
     apply from: "$rootProject.projectDir/dependencies.gradle"
 
-    group 'abhijit.learnitivity'
+    group 'abhijit.learnitivity.dsa'
     version '1.0.0'
 
 

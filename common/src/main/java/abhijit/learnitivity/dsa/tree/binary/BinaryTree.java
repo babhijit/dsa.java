@@ -1,4 +1,4 @@
-package tree.binary;
+package abhijit.learnitivity.dsa.tree.binary;
 
 import java.util.LinkedList;
 import java.util.Objects;
