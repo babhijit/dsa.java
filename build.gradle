@@ -1,0 +1,39 @@
+plugins {
+    id 'java'
+}
+
+subprojects {
+    apply plugin: 'java'
+}
+
+allprojects {
+
+    java {
+        toolchain {
+            languageVersion = JavaLanguageVersion.of(17)
+        }
+    }
+
+    apply from: "$rootProject.projectDir/dependencies.gradle"
+
+    group 'abhijit.learnitivity'
+    version '1.0.0'
+
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        testImplementation libsTest.jupiterApi
+        testRuntimeOnly libsTest.jupiterEngine
+    }
+
+    test {
+        useJUnitPlatform()
+    }
+
+    tasks.withType(JavaCompile) {
+        options.encoding = 'UTF-8'
+    }
+}

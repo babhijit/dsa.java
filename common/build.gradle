@@ -1,0 +1,13 @@
+plugins {
+    id 'java-library'
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/com.google.code.gson/gson
+    api libs.gson
+    // https://mvnrepository.com/artifact/commons-io/commons-io
+    api libs.commonsIo
+}
+
+
+jar.enabled = true

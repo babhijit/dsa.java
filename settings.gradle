@@ -1,0 +1,6 @@
+rootProject.name = 'algo.java'
+
+include 'leetcode'
+include 'interviewbit'
+include 'common'
+
