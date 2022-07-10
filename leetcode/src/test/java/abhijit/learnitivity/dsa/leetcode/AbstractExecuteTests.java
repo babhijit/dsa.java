@@ -1,6 +1,6 @@
 package abhijit.learnitivity.dsa.leetcode;
 
-import abhijit.learnitivity.dsa.test.GetTestCasesData;
+import abhijit.learnitivity.dsa.test.TestCasesDataRetriever;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
@@ -20,8 +20,8 @@ public abstract class AbstractExecuteTests<TestCase> {
 
     @Test
     void executeAllTests() throws IOException {
-        GetTestCasesData<TestCase> testCasesData = new GetTestCasesData<>();
-        List<TestCase> testCases = testCasesData.fetchTestCases(fileName, getClass(), testCaseType);
+        TestCasesDataRetriever<TestCase> retriever = new TestCasesDataRetriever<>();
+        List<TestCase> testCases = retriever.fetch(fileName, getClass(), testCaseType);
         testCases.forEach(this::executeTest);
     }
 }

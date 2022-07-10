@@ -12,10 +12,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class GetTestCasesData<TestCase> {
-    public List<TestCase> fetchTestCases(String fileName,
-                                         Class<?> testClassType,
-                                         Type testCaseType) throws IOException {
+public class TestCasesDataRetriever<TestCase> {
+    public List<TestCase> fetch(String fileName,
+                                Class<?> testClassType,
+                                Type testCaseType) throws IOException {
         String testsData = IOUtils.toString(
                 Objects.requireNonNull(testClassType.getResourceAsStream(fileName)),
                 StandardCharsets.UTF_8
